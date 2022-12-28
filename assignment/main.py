@@ -4,13 +4,13 @@ from data_extractor import fetch_data
 import os
 import tqdm
 
-input_file_path = r'helperfiles/Input.xlsx'
+input_file_path = r'Input.xlsx'
 
 #now lets fetch data
 #getting the working urls along with the text files for the working urls and save it in the scraped directory
 working_url = fetch_data(input_file_path)
 
-all_text_directory = r'blackcoffer_assignment/scraped'
+all_text_directory = r'scraped'
 
 #creating all stopwords dictionary
 all_stopwords = helper.create_stopwords()

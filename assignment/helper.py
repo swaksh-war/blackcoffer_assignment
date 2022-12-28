@@ -4,7 +4,7 @@ import nltk
 #Handling Stopwords
 #Creating our stopwords list
 def create_stopwords():
-    other_stopwords_dir = r'blackcoffer_assignment/StopWords'
+    other_stopwords_dir = r'StopWords'
     for i in os.listdir(other_stopwords_dir):
         with open(other_stopwords_dir + '/' + i, 'r') as f:
             data = f.read()
@@ -18,14 +18,14 @@ def create_stopwords():
 #Creating positive and Negative word dictionary
 def create_positive_dict():
 
-    positivedictionary = r'blackcoffer_assignment/MasterDictionary/positive-words.txt'
+    positivedictionary = r'MasterDictionary/positive-words.txt'
     with open(positivedictionary, 'r', encoding='Latin-1') as f:
         data = f.read()
         positive_words = data.split('\n')
     return positive_words
 
 def create_negative_dict():
-    negativedictionary = r'blackcoffer_assignment/MasterDictionary/negative-words.txt'
+    negativedictionary = r'MasterDictionary/negative-words.txt'
     with open(negativedictionary, 'r', encoding='Latin-1') as f:
         data = f.read()
         negative_words = data.split('\n')
